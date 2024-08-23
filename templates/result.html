@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="result-page">
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p>Your predicted length of stay in the hospital is:</p>
+        <ul>
+            <li><strong>{{ rf_prediction }}</strong> day{{ "s" if rf_prediction != 1 else "" }} according to the Random Forest model.</li>
+            <li><strong>{{ nn_prediction }}</strong> day{{ "s" if nn_prediction != 1 else "" }} according to the Neural Network model.</li>
+            <li><strong>{{ combined_prediction }}</strong> day{{ "s" if combined_prediction != 1 else "" }} as the combined prediction.</li>
+        </ul>
+        <a href="{{ url_for('home') }}">Make another prediction</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Stay Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="index-page">
+    <div class="container">
+        <h1>Predict Time in Hospital</h1>
+        <form action="/predict" method="POST">
+            <label for="admission_type_id">Admission Type ID:</label>
+            <input type="text" id="admission_type_id" name="admission_type_id"><br><br>
+
+            <label for="discharge_disposition_id">Discharge Disposition ID:</label>
+            <input type="text" id="discharge_disposition_id" name="discharge_disposition_id"><br><br>
+
+            <label for="admission_source_id">Admission Source ID:</label>
+            <input type="text" id="admission_source_id" name="admission_source_id"><br><br>
+
+            <label for="num_lab_procedures">Number of Lab Procedures:</label>
+            <input type="text" id="num_lab_procedures" name="num_lab_procedures"><br><br>
+
+            <label for="num_medications">Number of Medications:</label>
+            <input type="text" id="num_medications" name="num_medications"><br><br>
+
+            <label for="number_diagnoses">Number of Diagnoses:</label>
+            <input type="text" id="number_diagnoses" name="number_diagnoses"><br><br>
+
+            <label for="race">Race:</label>
+            <input type="text" id="race" name="race"><br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" name="gender"><br><br>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age"><br><br>
+
+            <label for="diag_1">Diagnosis 1:</label>
+            <input type="text" id="diag_1" name="diag_1"><br><br>
+
+            <label for="diag_2">Diagnosis 2:</label>
+            <input type="text" id="diag_2" name="diag_2"><br><br>
+
+            <label for="diag_3">Diagnosis 3:</label>
+            <input type="text" id="diag_3" name="diag_3"><br><br>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
