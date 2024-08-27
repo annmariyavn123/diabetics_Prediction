@@ -9,8 +9,8 @@ app = Flask(__name__)
 
 # Get the absolute path for the model files
 current_directory = os.path.dirname(__file__)
-rf_model_path = os.path.join(current_directory, r'D:\diabetics_combined_flask\models\best_rf_pipeline (1).pkl')
-nn_model_path = os.path.join(current_directory, r'D:\diabetics_combined_flask\models\nn_model.keras')
+rf_model_path = os.path.join(current_directory, r'D:\diabetics_prediction\models\best_rf_pipeline (1).pkl')
+nn_model_path = os.path.join(current_directory, r'D:\diabetics_prediction\models\nn_model.keras')
 
 # Load the trained models using absolute paths
 if os.path.exists(rf_model_path):
